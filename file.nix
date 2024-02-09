@@ -1,5 +1,8 @@
+/*nix-build -E "import ./file.nix \"$(date +%s)\" 3" */
+
+
 let
-  nixpkgs = import ../../nixpkgs.nix;
+  nixpkgs = import <nixpkgs>{};
 
   inherit (nixpkgs) stdenv;
 
